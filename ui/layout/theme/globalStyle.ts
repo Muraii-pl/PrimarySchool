@@ -1,9 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 import { device } from '../../../core/utils/breakpoints';
 import { IGlobalStyle } from '../../../core/interfaces/IGlobalStyle';
+import { Itheme } from '../../../core/interfaces/ITheme';
 
 
-const GlobalStyle = createGlobalStyle<{props: IGlobalStyle}>`
+const GlobalStyle = createGlobalStyle<{props: IGlobalStyle, theme: Itheme}>`
   body{
     margin: 0;
     padding: 0;
