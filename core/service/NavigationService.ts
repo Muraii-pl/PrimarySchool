@@ -7,7 +7,7 @@ async function getNavigation():Promise<INavigation[]> {
   return res.data.categories.nodes.map((item: INavigation) => {
     return ({
         name:item.name,
-        posts: item.posts.nodes.map((val: {slug: string, title:string}) => {
+        posts: item.posts?.nodes?.map((val: {slug: string, title:string}) => {
           return ({
             title: val.title,
             slug: val.slug

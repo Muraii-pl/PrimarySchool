@@ -1,8 +1,8 @@
 export interface INavigation {
   name: string;
   posts: {
-    nodes?: any,
+    nodes: [],
     slug: string,
     title: string
-  }[]
+  }
 }
