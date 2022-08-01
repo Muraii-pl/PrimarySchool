@@ -41,6 +41,9 @@ const Navbar = (): ReactElement => {
     const debounceHandleResize = debouce(function handleResize() {
       setWindowsWidth(window.innerWidth)
     }, 1000)
+    if (windowsWidth === 0) {
+      setWindowsWidth(window.innerWidth)
+    }
     window.addEventListener('resize', debounceHandleResize)
 
     return function (){
@@ -48,7 +51,7 @@ const Navbar = (): ReactElement => {
     }
   },[])
 
-  if (windowsWidth < 768) {
+   if (windowsWidth < 768) {
     return <MobileNavbar/>
   } else {
     return <DesktopNavbar/>
