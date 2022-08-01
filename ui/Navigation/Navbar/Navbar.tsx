@@ -1,17 +1,25 @@
 import { ReactElement, useEffect, useState } from 'react';
-import { debouce } from '../../core/utils/debouce';
-import Logo from '../Logo/Logo';
+import { debouce } from '../../../core/utils/debouce';
+import Logo from '../../Logo/Logo';
 import { Navigation } from './NavbarStyle';
-import MainMotto from '../MainMotto/MainMotto';
-import { Navigation as NavBars } from '@styled-icons/fluentui-system-filled/Navigation'
+import MainMotto from '../../MainMotto/MainMotto';
+import NavButton from '../NavButton/NavButton';
+
 
 
 const MobileNavbar = (): ReactElement => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleNavigation = () => {
+    console.log(isOpen)
+    setIsOpen(prevState => !prevState)
+  }
+
   return (
     <Navigation aria-label={'Mobile Navigation'} role={'navigation'}>
       <Logo/>
       <MainMotto/>
-      <NavBars width={30} height={30}/>
+      <NavButton toggleNavigation={toggleNavigation}/>
     </Navigation>
   )
 }

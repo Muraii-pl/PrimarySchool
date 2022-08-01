@@ -7,8 +7,9 @@ export interface IPost {
     slug: string;
     featuredImage: ICoverImage,
     author: {
-        firstName: string;
-        lastName: string;
+      node?: any;
+      firstName: string;
+      lastName: string;
     }
     date: string
 }

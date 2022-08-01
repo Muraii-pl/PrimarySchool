@@ -21,7 +21,7 @@ const Logo = ( data: any ) => {
   },[])
   return (
     <>
-      <a href={environment.homeurl}>
+      <a href={environment.homeUrl}>
         <LogoStyled  src={logoData.sourceUrl} alt={'Logo Placówki'} title={logoData.title}></LogoStyled>
       </a>
     </>

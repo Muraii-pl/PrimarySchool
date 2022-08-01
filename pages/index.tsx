@@ -21,7 +21,7 @@ const Home = ({ posts }: {posts :IPost[]}): ReactElement => {
             <div key={post.title}>
               <h2>{post.title}</h2>
               <div dangerouslySetInnerHTML={{__html: post.excerpt}}></div>
-              <img srcSet={post.featuredImage.srcSet}></img>
+              <img srcSet={post.featuredImage.srcSet} width={'100%'}></img>
             </div>
           )
         })}

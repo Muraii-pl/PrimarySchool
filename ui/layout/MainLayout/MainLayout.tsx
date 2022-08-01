@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import theme from '../theme/theme';
 import GlobalStyle from '../theme/globalStyle';
 import { IGlobalStyle } from '../../../core/interfaces/IGlobalStyle';
-import Navbar from '../../Navbar/Navbar';
+import Navbar from '../../Navigation/Navbar/Navbar';
 
 export default function MainLayout({children}: { children: ReactNode }): ReactElement {
   const [globalStyle, setGlobalStyle] = useState<IGlobalStyle>({
