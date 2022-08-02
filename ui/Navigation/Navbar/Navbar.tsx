@@ -4,6 +4,7 @@ import Logo from '../../Logo/Logo';
 import { Navigation } from './NavbarStyle';
 import MainMotto from '../../MainMotto/MainMotto';
 import NavButton from '../NavButton/NavButton';
+import NavList from '../NavList/NavList';
 
 
 
@@ -20,6 +21,7 @@ const MobileNavbar = (): ReactElement => {
       <Logo/>
       <MainMotto/>
       <NavButton toggleNavigation={toggleNavigation}/>
+      <NavList/>
     </Navigation>
   )
 }

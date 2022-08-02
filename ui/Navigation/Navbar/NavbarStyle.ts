@@ -9,6 +9,7 @@ const Navigation = styled.nav`
   display: flex;
   align-items: center;
   font-size: 16px;
+  position: relative;
   @media ${device.tablet} {
     font-size: initial;
   }

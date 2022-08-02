@@ -24,7 +24,6 @@ export default function MainLayout({children}: { children: ReactNode }): ReactEl
     })
     setThemeSelected(globalStyle.theme ? theme[globalStyle.theme] : theme['main'])
   }, [globalStyle.theme])
-  console.log(themeSelected)
   return (
     themeSelected && <ThemeProvider theme={themeSelected}>
       <GlobalStyle props={globalStyle}/>

@@ -1,9 +1,24 @@
 import styled from 'styled-components';
 
-const NavListWrapper = styled.div``
+const NavListWrapperStyled = styled.div``
 
-const NavList = styled.ul``
+const NavListStyled = styled.ul`
+  position: fixed;
+  top:60px;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: ${props => props.theme.mainColor};
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap ;
+`
 
-const NavListItem = styled.a``
+const NavListItemStyled = styled.li`
+  margin: 8px 0;
+  text-align: center;
+  font-size: 1.3rem;
+`
 
-export { NavListWrapper, NavList, NavListItem }
+
+export { NavListWrapperStyled, NavListStyled, NavListItemStyled }

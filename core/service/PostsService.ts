@@ -1,10 +1,10 @@
-import { IPost } from '../interfaces/IPost';
+import { IPost, IPostGraphQL } from '../interfaces/IPost';
 import client from '../utils/Apollo';
 import { PostsList } from '../models/PostsList';
 
 async function getPostsList(): Promise<IPost[]> {
   const res = await client.query(PostsList)
-  return res.data.posts.edges.map((item: { node: IPost }) => {
+  return res.data.posts.edges.map((item: { node: IPostGraphQL }) => {
 
     return (
       {
