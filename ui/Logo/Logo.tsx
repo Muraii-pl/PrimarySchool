@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getLogo as getLogoService } from '../../core/service/LogoService'
+import { getPageList } from '../../core/service/PagesMenuService'
 import LogoStyled from './LogoStyled';
 import { environment } from '../../environments/environment';
 

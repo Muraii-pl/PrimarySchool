@@ -17,9 +17,9 @@ async function getPostsList(): Promise<IPost[]> {
           lastname: item.node.author.node.lastName,
         },
         featuredImage: {
-          altText: item.node.featuredImage.node.altText,
-          title: item.node.featuredImage.node.title,
-          srcSet: item.node.featuredImage.node.srcSet,
+          altText: item.node?.featuredImage?.node?.altText ?? null,
+          title: item.node?.featuredImage?.node?.title ?? null,
+          srcSet: item.node?.featuredImage?.node?.srcSet ?? null,
         }
       }
     )

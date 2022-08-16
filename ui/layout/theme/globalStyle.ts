@@ -9,14 +9,14 @@ const GlobalStyle = createGlobalStyle<{props: IGlobalStyle, theme: Itheme}>`
     margin: 0;
     padding: 0;
     font-family: Ubuntu, sans-serif;
-    width: 100%;
+    width: 100vw;
     max-width: 1440px;
     font-size: ${props => props.props.fontSize};
     font-weight: ${props => props.props.weight};
     background-color: ${props => props.theme.bgColor};
     color: ${props => props.theme.textColor};
-    @media screen and ${device.mobileM} {
-      padding: 0 15px;
+    @media screen and ${device.tablet} {
+      margin: 0 15px;
     }
     @media screen and ${device.desktopL} {
       margin: 0 auto;
@@ -31,6 +31,10 @@ const GlobalStyle = createGlobalStyle<{props: IGlobalStyle, theme: Itheme}>`
   }
   ul {
     list-style: none;
+  }
+  
+  a {
+    text-decoration: ${props => props.props.underline} !important;
   }
   `
 

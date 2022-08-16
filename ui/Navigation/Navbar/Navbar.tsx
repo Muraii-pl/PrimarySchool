@@ -21,7 +21,7 @@ const MobileNavbar = (): ReactElement => {
       <Logo/>
       <MainMotto/>
       <NavButton toggleNavigation={toggleNavigation}/>
-      <NavList/>
+      <NavList isOpen={isOpen}/>
     </Navigation>
   )
 }
