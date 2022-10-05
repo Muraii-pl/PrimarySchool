@@ -29,7 +29,7 @@ const MobileNavbar = (): ReactElement => {
 const DesktopNavbar = (): ReactElement => {
   return (
     <Navigation aria-label={'Desktop Navigation'} role={'navigation'}>
-
+      <NavList isOpen={true}/>
     </Navigation>
   )
 }

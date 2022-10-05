@@ -10,7 +10,7 @@ async function getPostsList(): Promise<IPost[]> {
       {
         title: item.node.title,
         excerpt: item.node.excerpt,
-        data: item.node.date,
+        date: new Date(item.node.date).toLocaleDateString('pl-PL', {timeZone: 'UTC'}),
         slug: item.node.slug,
         author: {
           firstName: item.node.author.node.firstName,

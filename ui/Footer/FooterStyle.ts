@@ -10,6 +10,7 @@ const FooterStyled = styled.footer`
   margin-top: 15px;
   height: fit-content;
   padding: 75px 8px 15px;
+  order: 5;
   
 `
 

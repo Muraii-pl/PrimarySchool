@@ -3,9 +3,8 @@ import { IPost } from '../core/interfaces/IPost';
 import { getPostsList } from '../core/service/PostsService';
 import { ReactElement } from 'react';
 import PostItem from '../ui/PostItem/PostItem';
-import Carousel from '../ui/Carousel/Carousel';
 
-const Home = ({ posts }: {posts :IPost[]}): ReactElement => {
+const News = ({ posts }: {posts :IPost[]}): ReactElement => {
   return (
     <>
       <Head>
@@ -40,4 +39,4 @@ export async function getStaticProps(): Promise<{ props: { posts: IPost[] } }> {
   };
 }
 
-export default Home
+export default News

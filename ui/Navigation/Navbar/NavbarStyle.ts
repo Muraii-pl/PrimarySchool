@@ -12,6 +12,7 @@ const Navigation = styled.nav`
   position: relative;
   @media ${device.tablet} {
     font-size: initial;
+    height: 60px;
   }
 `
 export { Navigation }

@@ -12,9 +12,13 @@ const SubMenuItemStyled = styled.a`
   align-items: center;
   text-align: center;
   word-break: break-word;
-  min-height: 100%;
+  height: 60px;
   &:nth-child(n + 2) {
     display: none;
+  }
+  @media ${device.tablet} {
+    width: 100%;
+    
   }
 ;
 `
@@ -31,6 +35,13 @@ const SumMenuItemWrapper = styled.div`
     }
     &:nth-child(n + 4){
       display: none;
+    }
+    
+    @media ${device.tablet} {
+      &:nth-child(n + 2) {
+        margin-top:15px;
+      }
+
     }
   }
   

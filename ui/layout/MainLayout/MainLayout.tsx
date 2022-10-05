@@ -6,6 +6,10 @@ import { IGlobalStyle } from '../../../core/interfaces/IGlobalStyle';
 import Navbar from '../../Navigation/Navbar/Navbar';
 import SubMenu from '../../SubMenu/SubMenu';
 import Footer from '../../Footer/Footer';
+import WrapperPage from '../../PageWrapper/WrapperPage';
+import Carousel from '../../Carousel/Carousel';
+import { useRouter } from 'next/router';
+import Logo from '../../Logo/Logo';
 
 export default function MainLayout({children}: { children: ReactNode }): ReactElement {
   const [globalStyle, setGlobalStyle] = useState<IGlobalStyle>({
@@ -25,12 +29,20 @@ export default function MainLayout({children}: { children: ReactNode }): ReactEl
     })
     setThemeSelected(globalStyle.theme ? theme[globalStyle.theme] : theme['main'])
   }, [globalStyle.theme])
+
+
+  const router = useRouter()
   return (
     themeSelected && <ThemeProvider theme={themeSelected}>
       <GlobalStyle props={globalStyle}/>
       <Navbar/>
+      {router.pathname === '/' &&  <Carousel/>}
+      {router.pathname !== '/' &&  <Logo/>}
+
       <SubMenu/>
-      {children}
+      <WrapperPage>
+        {children}
+      </WrapperPage>
       <Footer/>
     </ThemeProvider>
   )

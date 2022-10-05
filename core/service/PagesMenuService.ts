@@ -4,7 +4,6 @@ import { PageList } from '../models/PagesMenu'
 
 async function getPageList(): Promise<IPagesMenu[]> {
   const res = await client.query(PageList);
-  // console.log(res)
   return res.data.pages.edges.map((page: IPagesMenuGraphQL) => {
     return ({
       title: page.node.title,

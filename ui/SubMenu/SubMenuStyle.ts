@@ -6,5 +6,13 @@ const AsideNav = styled.nav`
   display: flex;
   justify-content: space-evenly;
   margin-top: 15px;
+  max-width: 1440px;
+  @media screen and ${device.tablet} {
+    margin-left: 15px;
+    order: 4;
+    width: 160px;
+    height: 100%;
+    flex-flow: column wrap;
+  }
 `
 export { AsideNav }

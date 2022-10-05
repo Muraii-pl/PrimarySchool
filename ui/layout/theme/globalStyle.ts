@@ -16,9 +16,10 @@ const GlobalStyle = createGlobalStyle<{props: IGlobalStyle, theme: Itheme}>`
     background-color: ${props => props.theme.bgColor};
     color: ${props => props.theme.textColor};
     @media screen and ${device.tablet} {
-      margin: 0 15px;
+      padding: 0 15px;
+      
     }
-    @media screen and ${device.desktopL} {
+    @media screen and ${device.laptopL} {
       margin: 0 auto;
     }
   }
@@ -36,6 +37,18 @@ const GlobalStyle = createGlobalStyle<{props: IGlobalStyle, theme: Itheme}>`
   a {
     text-decoration: ${props => props.props.underline} !important;
   }
+  main{
+    margin: 0 15px;
+    @media screen and ${device.tablet} {
+      width: 100%;
+      margin: 0;
+    }
+  }
+  #__next{
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
   `
 
 export default GlobalStyle;
