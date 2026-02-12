@@ -15,7 +15,7 @@
   "dependencies": {
     "@apollo/client": "^3.6.9",
     "@styled-icons/material": "^10.34.0",
-    "axios": "^0.27.2",
+    "axios": "^1.13.5",
     "graphql": "^16.5.0",
     "next": "12.2.2",
     "react": "18.2.0",
